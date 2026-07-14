@@ -1,13 +1,24 @@
-import { currentUser } from "@/lib/auth";
-import { getDemoStore, listTasks } from "@/lib/demoStore";
-import { fail, guard, ok } from "@/lib/response";
+import { supabase } from '@/lib/supabase';
+import { currentUser } from '@/lib/auth';
+import { ok, fail, guard } from '@/lib/response';
 
-export async function GET() {
-  return guard(async () => {
-    const user = await currentUser();
-    if (!user) return fail(401, "Unauthorized");
-    const team = getDemoStore().users.map(({ id, name, email, role, avatar, created_at }) => ({ id, name, email, role, avatar, created_at }));
-    const assignees = Array.from(new Set(["Unassigned", ...team.map((member) => member.name), ...listTasks().map((task) => task.assignee)])).sort();
-    return ok({ team, assignees });
-  });
-}
+export const GET = guard(async () => {
+  // 1. Authenticate user
+  const user = await currentUser();
+  if (!user) {
+    return fail(401, 'Unauthorized: Authentication required');
+  }
+
+  // 2. Fetch users (omit password hash for security)
+  const { data: users, error } = await supabase
+    .from('users')
+    .select('id, name, email, role, avatar, created_at')
+    .order('name', { ascending: true });
+
+  if (error) {
+    console.error('Error fetching users:', error);
+    return fail(500, 'Database error while fetching users: ' + error.message);
+  }
+
+  return ok(users);
+});

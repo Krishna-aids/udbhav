@@ -1,75 +1,59 @@
-create extension if not exists pgcrypto;
+-- Enable UUID generation extension if not exists
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
-create table if not exists public.users (
-  id uuid primary key default gen_random_uuid(),
-  name text not null,
-  email text not null unique,
-  password_hash text not null,
-  role text not null default 'member' check (role in ('admin', 'manager', 'member')),
-  avatar text,
-  created_at timestamptz not null default now()
+-- 1. Users Table
+CREATE TABLE IF NOT EXISTS users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    name TEXT NOT NULL,
+    email TEXT UNIQUE NOT NULL,
+    password_hash TEXT NOT NULL,
+    role TEXT NOT NULL DEFAULT 'member' CHECK (role IN ('admin', 'manager', 'member')),
+    avatar TEXT,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-create table if not exists public.tasks (
-  id text primary key,
-  title text not null,
-  description text not null default '',
-  status text not null check (status in ('Backlog', 'In Progress', 'Review', 'Done')),
-  assignee text not null default 'Unassigned',
-  priority text not null default 'med' check (priority in ('low', 'med', 'high')),
-  labels text[] not null default '{}',
-  due_date date,
-  estimate_hours integer not null default 0 check (estimate_hours >= 0),
-  completed_date date,
-  position integer not null default 0,
-  has_warning boolean not null default false,
-  created_by uuid references public.users(id) on delete set null,
-  created_at timestamptz not null default now(),
-  updated_at timestamptz not null default now()
+-- 2. Tasks Table
+CREATE TABLE IF NOT EXISTS tasks (
+    id TEXT PRIMARY KEY, -- Matches imported IDs or custom string format
+    title TEXT NOT NULL,
+    description TEXT,
+    status TEXT NOT NULL CHECK (status IN ('Backlog', 'In Progress', 'Review', 'Done')),
+    assignee TEXT NOT NULL DEFAULT 'Unassigned',
+    priority TEXT NOT NULL CHECK (priority IN ('low', 'med', 'high')),
+    labels TEXT[] NOT NULL DEFAULT '{}',
+    due_date TIMESTAMPTZ,
+    estimate_hours INT NOT NULL DEFAULT 0,
+    completed_date TIMESTAMPTZ,
+    position INT NOT NULL DEFAULT 0,
+    has_warning BOOLEAN NOT NULL DEFAULT FALSE,
+    created_by UUID REFERENCES users(id) ON DELETE SET NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now(),
+    updated_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-create table if not exists public.comments (
-  id uuid primary key default gen_random_uuid(),
-  task_id text not null references public.tasks(id) on delete cascade,
-  user_id uuid not null references public.users(id) on delete cascade,
-  text text not null,
-  created_at timestamptz not null default now()
+-- 3. Comments Table
+CREATE TABLE IF NOT EXISTS comments (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    task_id TEXT REFERENCES tasks(id) ON DELETE CASCADE NOT NULL,
+    user_id UUID REFERENCES users(id) ON DELETE CASCADE NOT NULL,
+    text TEXT NOT NULL,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-create table if not exists public.activity_log (
-  id uuid primary key default gen_random_uuid(),
-  task_id text references public.tasks(id) on delete set null,
-  user_id uuid references public.users(id) on delete set null,
-  action text not null check (
-    action in (
-      'created',
-      'moved',
-      'completed',
-      'reordered',
-      'assigned',
-      'unassigned',
-      'deleted',
-      'imported',
-      'reset'
-    )
-  ),
-  from_status text,
-  to_status text,
-  created_at timestamptz not null default now()
+-- 4. Activity Log Table
+CREATE TABLE IF NOT EXISTS activity_log (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    task_id TEXT REFERENCES tasks(id) ON DELETE SET NULL,
+    user_id UUID REFERENCES users(id) ON DELETE SET NULL,
+    action TEXT NOT NULL CHECK (action IN ('created', 'moved', 'completed', 'reordered', 'assigned', 'unassigned', 'deleted', 'imported', 'reset')),
+    from_status TEXT,
+    to_status TEXT,
+    created_at TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
-create index if not exists tasks_status_position_idx on public.tasks(status, position);
-create index if not exists comments_task_created_idx on public.comments(task_id, created_at desc);
-create index if not exists activity_log_created_idx on public.activity_log(created_at desc);
-
-alter table public.users disable row level security;
-alter table public.tasks disable row level security;
-alter table public.comments disable row level security;
-alter table public.activity_log disable row level security;
-
-insert into public.users (name, email, password_hash, role, avatar)
-values
-  ('Asha Admin', 'admin@udbhav.local', '$2b$12$pIAFbZqSfaJTMfufbu1BZ.6U9FL0SAeJjMaOEY0QVDDZVEKNkxrF.', 'admin', 'AA'),
-  ('Mira Manager', 'manager@udbhav.local', '$2b$12$tpZXAa418tosP2lFBGEP4uAHe5dc7ecvoD8IH9Vcm9gUYXFHcqmZO', 'manager', 'MM'),
-  ('Dev Member', 'member@udbhav.local', '$2b$12$hHojaDItQw8qXGxb1SkB2.UAND/cRTpFbRiEh4PgR1YjJn9daSGTC', 'member', 'DM')
-on conflict (email) do nothing;
+-- Seed Users
+INSERT INTO users (id, name, email, password_hash, role, avatar) VALUES
+('a0e0a0e0-a0e0-a0e0-a0e0-a0e0a0e0a0e1', 'Udbhav Admin', 'admin@udbhav.com', '$2b$10$fHysny4YOK1j12T/onDqBeJzhMrEvRh3PAv2vkiK3Sy0/oUziIXci', 'admin', 'https://api.dicebear.com/7.x/bottts/svg?seed=admin'),
+('a0e0a0e0-a0e0-a0e0-a0e0-a0e0a0e0a0e2', 'Udbhav Manager', 'manager@udbhav.com', '$2b$10$2J5V2sYsOp3mDKYkxTP45eu.e3dMzXxHqY9d8YBGb18pZP5eIpIA2', 'manager', 'https://api.dicebear.com/7.x/bottts/svg?seed=manager'),
+('a0e0a0e0-a0e0-a0e0-a0e0-a0e0a0e0a0e3', 'Udbhav Member', 'member@udbhav.com', '$2b$10$9n8A/HfTojQLBqEB4ynZzevVonaX/ZXTRD4q00hIhxEdnEK4Se9su', 'member', 'https://api.dicebear.com/7.x/bottts/svg?seed=member')
+ON CONFLICT (email) DO NOTHING;

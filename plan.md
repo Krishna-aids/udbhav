@@ -1,4 +1,4 @@
-# udbhav — Implementation Plan (plan.md)
+# Udbhav — Implementation Plan (plan.md)
 
 > HOW to build it. Architecture, decisions, sequencing. Claude: build in the phase order below; each phase ends at a verifiable checkpoint.
 

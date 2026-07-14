@@ -20,22 +20,21 @@ export const POST = guard(async () => {
     const content = fs.readFileSync(filePath, 'utf-8');
     rawData = JSON.parse(content);
   } catch (err: any) {
-    console.error('Error reading tasks.json seed data:', err);
+    console.error('Error reading tasks.json for board reset:', err);
     return fail(500, 'Error reading seed file: ' + err.message);
   }
 
   // 3. Clean raw tasks
   const { cleaned, issuesFixed, tasksLoaded } = cleanTasks(rawData);
 
-  // 4. Wipe tasks table (CASCADE deletes comments automatically)
-  // Delete all tasks. We filter by id is not null (neq) or similar to target all rows.
+  // 4. Wipe tasks table
   const { error: wipeError } = await supabase
     .from('tasks')
     .delete()
     .neq('id', '');
 
   if (wipeError) {
-    console.error('Error wiping database tasks:', wipeError);
+    console.error('Error wiping tasks during reset:', wipeError);
     return fail(500, 'Database error while wiping tasks: ' + wipeError.message);
   }
 
@@ -45,14 +44,13 @@ export const POST = guard(async () => {
     created_by: user.userId,
   }));
 
-  // Chunk inserts if necessary, but 37 records fits well in a single request.
   const { error: insertError } = await supabase
     .from('tasks')
     .insert(tasksToInsert);
 
   if (insertError) {
-    console.error('Error inserting cleaned tasks:', insertError);
-    return fail(500, 'Database error while inserting cleaned tasks: ' + insertError.message);
+    console.error('Error inserting tasks during reset:', insertError);
+    return fail(500, 'Database error while inserting tasks: ' + insertError.message);
   }
 
   // 6. Log activity
@@ -60,13 +58,13 @@ export const POST = guard(async () => {
     .from('activity_log')
     .insert({
       user_id: user.userId,
-      action: 'imported',
+      action: 'reset',
       from_status: String(issuesFixed),
       to_status: String(tasksLoaded),
     });
 
   if (logError) {
-    console.warn('Non-fatal: Error logging import activity:', logError);
+    console.warn('Non-fatal: Error logging reset activity:', logError);
   }
 
   // 7. Notify client-side real-time stream

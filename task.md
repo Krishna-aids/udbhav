@@ -1,33 +1,33 @@
-# udbhav — Task Checklist (task.md)
+# ADAM — Task Checklist (task.md)
 
 > Do these in order, top to bottom. Tick `[x]` when done. Finish each phase's **CHECKPOINT** before moving on.
 
 ## Phase 0 — Setup
-- [x] `npx create-next-app@latest` (App Router, TS, Tailwind, src/, alias `@/*`)
-- [x] Install deps: `@supabase/supabase-js jose bcryptjs @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities zod recharts`
-- [x] Create `.env.local` with `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `JWT_SECRET` (+ optional `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
+- [ ] `npx create-next-app@latest` (App Router, TS, Tailwind, src/, alias `@/*`)
+- [ ] Install deps: `@supabase/supabase-js jose bcryptjs @dnd-kit/core @dnd-kit/sortable @dnd-kit/utilities zod recharts`
+- [ ] Create `.env.local` with `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `JWT_SECRET` (+ optional `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`)
 - [ ] Supabase: create project, run `supabase/schema.sql` (users, tasks, comments, activity_log), RLS off
 - [ ] Seed one user per role (admin/manager/member), bcrypt-hashed
-- [x] Add `src/data/tasks.json` (dirty seed, 40 records)
-- [x] `lib/`: `supabase.ts`, `supabaseBrowser.ts`, `jwt.ts` (sign/verify), `auth.ts` (currentUser), `response.ts` (ok/fail/guard), `types.ts`
+- [ ] Add `src/data/tasks.json` (dirty seed, 40 records)
+- [ ] `lib/`: `supabase.ts`, `supabaseBrowser.ts`, `jwt.ts` (sign/verify), `auth.ts` (currentUser), `response.ts` (ok/fail/guard), `types.ts`
 - **CHECKPOINT:** app runs on localhost; Supabase tables exist.
 
 ## Phase 1 — Auth & protection
-- [ ] `POST /api/auth/signup` (Zod, hash password, insert user, **role forced to member**, set cookie)
-- [ ] `POST /api/auth/login` (verify, sign JWT, set httpOnly cookie `token`)
-- [ ] `POST /api/auth/logout` (clear cookie)
-- [ ] `src/middleware.ts` (verify JWT with jose; protect tasks/import/board/comments/stats/activity/users/stream + board/dashboard pages)
-- [ ] `login` page (login/signup toggle; signup has **no role picker**)
+- [x] `POST /api/auth/signup` (Zod, hash password, insert user, **role forced to member**, set cookie)
+- [x] `POST /api/auth/login` (verify, sign JWT, set httpOnly cookie `token`)
+- [x] `POST /api/auth/logout` (clear cookie)
+- [x] `src/middleware.ts` (verify JWT with jose; protect tasks/import/board/comments/stats/activity/users/stream + board/dashboard pages)
+- [x] `login` page (login/signup toggle; signup has **no role picker**)
 - **CHECKPOINT:** unauthed `GET /api/tasks` → 401; login sets cookie; logout clears it.
 
 ## Phase 2 — Data + Board (read)
-- [ ] `lib/clean.ts` — dedupe (keep later), parse 3 date formats, fix assignee, fix estimate, fix status(+warning), return `{cleaned, issuesFixed, tasksLoaded}`
-- [ ] Unit-test `clean.ts` → **13 issues fixed · 37 tasks loaded** (`npm run test:clean`)
-- [ ] `POST /api/import` (clean → wipe → insert → return counts → log activity → notifyChange)
-- [ ] `GET /api/tasks` (list, ordered by position)
-- [ ] `board` page: 4 columns, cards, ⚠ on has_warning
-- [ ] Header **Data Health badge**: `"N issues fixed · M tasks loaded"`
-- [ ] Column headers: count + total estimate hours; Done: hours completed this week (Mon–Sun, `lib/dates.ts`)
+- [x] `lib/clean.ts` — dedupe (keep later), parse 3 date formats, fix assignee, fix estimate, fix status(+warning), return `{cleaned, issuesFixed, tasksLoaded}`
+- [x] Unit-test `clean.ts` → **13 issues fixed · 37 tasks loaded** (`npm run test:clean`)
+- [x] `POST /api/import` (clean → wipe → insert → return counts → log activity → notifyChange)
+- [x] `GET /api/tasks` (list, ordered by position)
+- [x] `board` page: 4 columns, cards, ⚠ on has_warning
+- [x] Header **Data Health badge**: `"N issues fixed · M tasks loaded"`
+- [x] Column headers: count + total estimate hours; Done: hours completed this week (Mon–Sun, `lib/dates.ts`)
 - **CHECKPOINT:** clean data renders; badge shows correct numbers.
 
 ## Phase 3 — Task engine + WIP + roles
@@ -65,4 +65,3 @@
 
 ## Optional (stretch)
 - [ ] File attachments (Supabase Storage) · @-mentions in comments · rate limiting · audit export
-

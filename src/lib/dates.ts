@@ -1,27 +1,41 @@
-export function startOfWeek(date = new Date()) {
-  const copy = new Date(date);
-  copy.setHours(0, 0, 0, 0);
-  const day = copy.getDay();
-  const diff = day === 0 ? -6 : 1 - day;
-  copy.setDate(copy.getDate() + diff);
-  return copy;
+/**
+ * Determines if a given date falls within the current week's boundaries (Monday through Sunday).
+ */
+export function isCompletedThisWeek(dateInput: string | Date | null | undefined): boolean {
+  if (!dateInput) return false;
+  
+  const d = new Date(dateInput);
+  if (isNaN(d.getTime())) return false;
+
+  const now = new Date();
+  
+  // 1. Get the start of the week (Monday at 00:00:00.000)
+  const startOfWeek = new Date(now);
+  const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
+  const diffToMonday = day === 0 ? -6 : 1 - day; // Adjust to get previous/current Monday
+  
+  startOfWeek.setDate(now.getDate() + diffToMonday);
+  startOfWeek.setHours(0, 0, 0, 0);
+
+  // 2. Get the end of the week (Sunday at 23:59:59.999)
+  const endOfWeek = new Date(startOfWeek);
+  endOfWeek.setDate(startOfWeek.getDate() + 6);
+  endOfWeek.setHours(23, 59, 59, 999);
+
+  return d >= startOfWeek && d <= endOfWeek;
 }
 
-export function endOfWeek(date = new Date()) {
-  const end = startOfWeek(date);
-  end.setDate(end.getDate() + 6);
-  end.setHours(23, 59, 59, 999);
-  return end;
-}
-
-export function isThisWeek(value: string | null, now = new Date()) {
-  if (!value) return false;
-  const date = new Date(`${value}T00:00:00`);
-  return date >= startOfWeek(now) && date <= endOfWeek(now);
-}
-
-export function isOverdue(dueDate: string | null, status: string, now = new Date()) {
-  if (!dueDate || status === "Done") return false;
-  const due = new Date(`${dueDate}T23:59:59`);
-  return due < now;
+/**
+ * Formats an ISO string date into a human readable format.
+ */
+export function formatFriendlyDate(dateInput: string | Date | null | undefined): string {
+  if (!dateInput) return 'No due date';
+  const d = new Date(dateInput);
+  if (isNaN(d.getTime())) return 'Invalid date';
+  
+  return d.toLocaleDateString(undefined, {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+  });
 }

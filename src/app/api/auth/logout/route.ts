@@ -1,14 +1,17 @@
-import { cookies } from "next/headers";
-import { ok } from "@/lib/response";
+import { cookies } from 'next/headers';
+import { ok, guard } from '@/lib/response';
 
-export async function POST() {
+export const POST = guard(async () => {
   const cookieStore = await cookies();
-  cookieStore.set("token", "", {
+  cookieStore.set('token', '', {
     httpOnly: true,
-    sameSite: "lax",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 0,
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    maxAge: 0, // Clears the cookie immediately
+    path: '/',
   });
-  return ok({ loggedOut: true });
-}
+
+  return ok({
+    message: 'Logged out successfully',
+  });
+});

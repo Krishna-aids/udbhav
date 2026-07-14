@@ -1,47 +1,40 @@
-import { SignJWT, jwtVerify } from "jose";
-import type { AuthUser, UserRole } from "@/lib/types";
+import { SignJWT, jwtVerify } from 'jose';
+import { JWTPayload } from './types';
 
-const tokenTtl = "2h";
+const JWT_SECRET = process.env.JWT_SECRET;
 
-function getSecretKey() {
-  const secret = process.env.JWT_SECRET;
-
-  if (!secret || secret.length < 32) {
-    throw new Error("JWT_SECRET must be at least 32 characters");
-  }
-
-  return new TextEncoder().encode(secret);
+if (!JWT_SECRET || JWT_SECRET.length < 32) {
+  console.warn('WARNING: JWT_SECRET environment variable is missing or too short (needs to be >= 32 characters). Using a fallback secret.');
 }
 
-export async function signToken(user: AuthUser) {
-  return new SignJWT({
-    userId: user.id,
-    role: user.role,
-    name: user.name,
-  })
-    .setProtectedHeader({ alg: "HS256" })
+const secretKey = new TextEncoder().encode(
+  JWT_SECRET || 'default_super_secret_jwt_secret_key_at_least_32_characters_long'
+);
+
+/**
+ * Signs a JWT token with a 2-hour expiration time using HS256 algorithm.
+ */
+export async function signToken(payload: JWTPayload): Promise<string> {
+  // Convert custom payload into a plain object to satisfy jose requirements
+  const josePayload = { ...payload } as any;
+  
+  return await new SignJWT(josePayload)
+    .setProtectedHeader({ alg: 'HS256' })
     .setIssuedAt()
-    .setExpirationTime(tokenTtl)
-    .sign(getSecretKey());
+    .setExpirationTime('2h')
+    .sign(secretKey);
 }
 
-export async function verifyToken(token: string): Promise<AuthUser | null> {
+/**
+ * Verifies a JWT token and returns the decoded payload, or null if invalid/expired.
+ */
+export async function verifyToken(token: string): Promise<JWTPayload | null> {
   try {
-    const { payload } = await jwtVerify(token, getSecretKey());
-    const userId = payload.userId;
-    const role = payload.role;
-    const name = payload.name;
-
-    if (typeof userId !== "string" || typeof name !== "string") {
-      return null;
-    }
-
-    if (role !== "admin" && role !== "manager" && role !== "member") {
-      return null;
-    }
-
-    return { id: userId, name, role: role as UserRole };
-  } catch {
+    const { payload } = await jwtVerify(token, secretKey, {
+      algorithms: ['HS256'],
+    });
+    return payload as unknown as JWTPayload;
+  } catch (error) {
     return null;
   }
 }

@@ -1,0 +1,533 @@
+
+> udbhav@0.1.0 dev
+> next dev --hostname 127.0.0.1 --port 3000
+
+▲ Next.js 16.2.10 (Turbopack)
+- Local:         http://127.0.0.1:3000
+- Network:       http://127.0.0.1:3000
+- Environments: .env.local
+✓ Ready in 929ms
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead. Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+
+ POST /api/auth/login 200 in 647ms (next.js: 239ms, proxy.ts: 75ms, application-code: 333ms)
+ PATCH /api/tasks/move 200 in 344ms (next.js: 318ms, proxy.ts: 13ms, application-code: 13ms)
+ GET /api/tasks 200 in 75ms (next.js: 49ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /login 200 in 299ms (next.js: 126ms, application-code: 172ms)
+ GET /login 200 in 51ms (next.js: 6ms, application-code: 45ms)
+ POST /api/auth/login 200 in 377ms (next.js: 51ms, proxy.ts: 46ms, application-code: 280ms)
+ GET /board 200 in 74ms (next.js: 44ms, proxy.ts: 7ms, application-code: 23ms)
+ GET /board 200 in 37ms (next.js: 9ms, proxy.ts: 4ms, application-code: 23ms)
+ GET /api/tasks 200 in 56ms (next.js: 27ms, proxy.ts: 9ms, application-code: 19ms)
+ GET /api/tasks 200 in 55ms (next.js: 36ms, proxy.ts: 8ms, application-code: 11ms)
+✓ Compiled in 654ms
+✓ Compiled in 312ms
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 1933ms (next.js: 1504ms, proxy.ts: 102ms, application-code: 327ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 38ms (next.js: 18ms, proxy.ts: 7ms, application-code: 13ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 36ms (next.js: 16ms, proxy.ts: 5ms, application-code: 14ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 29ms (next.js: 14ms, proxy.ts: 4ms, application-code: 10ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 33ms (next.js: 13ms, proxy.ts: 5ms, application-code: 15ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 33ms (next.js: 14ms, proxy.ts: 5ms, application-code: 15ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 37ms (next.js: 17ms, proxy.ts: 6ms, application-code: 14ms)
+⨯ ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  [90m913 |[0m   }
+  [90m914 |[0m }
+[31m[1m>[0m [90m915 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...[0m
+  [90m    |[0m        [31m[1m^[0m
+  [90m916 |[0m :root {
+  [90m917 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m918 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 33ms (next.js: 15ms, proxy.ts: 5ms, application-code: 13ms)
+[browser] Uncaught Error: ./src/app/globals.css:915:8
+Parsing CSS source code failed
+  913 |   }
+  914 | }
+> 915 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...
+      |        ^
+  916 | :root {
+  917 |   --bg-primary: #0b0f14;
+  918 |   --bg-secondary: #111827;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:915:8
+  913 |   }
+  914 | }
+> 915 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;...
+      |        ^
+  916 | :root {
+  917 |   --bg-primary: #0b0f14;
+  918 |   --bg-secondary: #111827;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:915:8)
+    at <unknown> (./src/app/globals.css:915:8)
+    at <unknown> (Error: (./src/app/globals.css:915:8)
+    at <unknown> (./src/app/globals.css:915:8)
+⨯ ./src/app/globals.css:1053:8
+Parsing CSS source code failed
+  [90m1051 |[0m   }
+  [90m1052 |[0m }
+[31m[1m>[0m [90m1053 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1054 |[0m :root {
+  [90m1055 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1056 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1053:8
+  [90m1051 |[0m   }
+  [90m1052 |[0m }
+[31m[1m>[0m [90m1053 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1054 |[0m :root {
+  [90m1055 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1056 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 53ms (next.js: 14ms, proxy.ts: 24ms, application-code: 16ms)
+[browser] Uncaught Error: ./src/app/globals.css:1053:8
+Parsing CSS source code failed
+  1051 |   }
+  1052 | }
+> 1053 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1054 | :root {
+  1055 |   --bg-primary: #0b0f14;
+  1056 |   --bg-secondary: #111827;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1053:8
+  1051 |   }
+  1052 | }
+> 1053 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1054 | :root {
+  1055 |   --bg-primary: #0b0f14;
+  1056 |   --bg-secondary: #111827;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1053:8)
+    at <unknown> (./src/app/globals.css:1053:8)
+    at <unknown> (Error: (./src/app/globals.css:1053:8)
+    at <unknown> (./src/app/globals.css:1053:8)
+⨯ ./src/app/globals.css:1338:8
+Parsing CSS source code failed
+  [90m1336 |[0m   }
+  [90m1337 |[0m }
+[31m[1m>[0m [90m1338 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1339 |[0m :root {
+  [90m1340 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1341 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1338:8
+  [90m1336 |[0m   }
+  [90m1337 |[0m }
+[31m[1m>[0m [90m1338 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1339 |[0m :root {
+  [90m1340 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1341 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 81ms (next.js: 48ms, proxy.ts: 20ms, application-code: 12ms)
+[browser] Uncaught Error: ./src/app/globals.css:1338:8
+Parsing CSS source code failed
+  1336 |   }
+  1337 | }
+> 1338 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1339 | :root {
+  1340 |   --bg-primary: #0b0f14;
+  1341 |   --bg-secondary: #111827;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1338:8
+  1336 |   }
+  1337 | }
+> 1338 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1339 | :root {
+  1340 |   --bg-primary: #0b0f14;
+  1341 |   --bg-secondary: #111827;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1338:8)
+    at <unknown> (./src/app/globals.css:1338:8)
+    at <unknown> (Error: (./src/app/globals.css:1338:8)
+    at <unknown> (./src/app/globals.css:1338:8)
+⨯ ./src/app/globals.css:1037:8
+Parsing CSS source code failed
+  [90m1035 |[0m   }
+  [90m1036 |[0m }
+[31m[1m>[0m [90m1037 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1038 |[0m :root {
+  [90m1039 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1040 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1037:8
+  [90m1035 |[0m   }
+  [90m1036 |[0m }
+[31m[1m>[0m [90m1037 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1038 |[0m :root {
+  [90m1039 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1040 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 250ms (next.js: 115ms, proxy.ts: 32ms, application-code: 103ms)
+[browser] Uncaught Error: ./src/app/globals.css:1037:8
+Parsing CSS source code failed
+  1035 |   }
+  1036 | }
+> 1037 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1038 | :root {
+  1039 |   --bg-primary: #0b0f14;
+  1040 |   --bg-secondary: #111827;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1037:8
+  1035 |   }
+  1036 | }
+> 1037 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1038 | :root {
+  1039 |   --bg-primary: #0b0f14;
+  1040 |   --bg-secondary: #111827;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1037:8)
+    at <unknown> (./src/app/globals.css:1037:8)
+    at <unknown> (Error: (./src/app/globals.css:1037:8)
+    at <unknown> (./src/app/globals.css:1037:8)
+⨯ ./src/app/globals.css:1050:8
+Parsing CSS source code failed
+  [90m1048 |[0m   }
+  [90m1049 |[0m }
+[31m[1m>[0m [90m1050 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1051 |[0m :root {
+  [90m1052 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1053 |[0m   --bg-secondary: #[35m111827[0m;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1050:8
+  [90m1048 |[0m   }
+  [90m1049 |[0m }
+[31m[1m>[0m [90m1050 |[0m @[36mimport[0m url([32m'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...[0m
+  [90m     |[0m        [31m[1m^[0m
+  [90m1051 |[0m :root {
+  [90m1052 |[0m   --bg-primary: #[35m0b0[0mf14;
+  [90m1053 |[0m   --bg-secondary: #[35m111827[0m;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+ GET /board 500 in 196ms (next.js: 82ms, proxy.ts: 89ms, application-code: 24ms)
+[browser] Uncaught Error: ./src/app/globals.css:1050:8
+Parsing CSS source code failed
+  1048 |   }
+  1049 | }
+> 1050 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1051 | :root {
+  1052 |   --bg-primary: #0b0f14;
+  1053 |   --bg-secondary: #111827;
+
+@import rules must precede all rules aside from @charset and @layer statements
+
+Generated code of PostCSS transform of file content of src/app/globals.css:
+./src/app/globals.css:1050:8
+  1048 |   }
+  1049 | }
+> 1050 | @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800...
+       |        ^
+  1051 | :root {
+  1052 |   --bg-primary: #0b0f14;
+  1053 |   --bg-secondary: #111827;
+
+Import trace:
+  Client Component Browser:
+    ./src/app/globals.css [Client Component Browser]
+    ./src/app/layout.tsx [Server Component]
+
+
+    at <unknown> (Error: ./src/app/globals.css:1050:8)
+    at <unknown> (./src/app/globals.css:1050:8)
+    at <unknown> (Error: (./src/app/globals.css:1050:8)
+    at <unknown> (./src/app/globals.css:1050:8)
+ GET /board 200 in 497ms (next.js: 211ms, proxy.ts: 8ms, application-code: 278ms)
+ GET /api/tasks 200 in 166ms (next.js: 112ms, proxy.ts: 11ms, application-code: 43ms)

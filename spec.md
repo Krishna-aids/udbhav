@@ -1,10 +1,10 @@
-# udbhav — Specification (spec.md)
+# Udbhav — Specification (spec.md)
 
 > WHAT to build. Claude: treat every "must" as a hard requirement. Numbers are exact.
 
 ## 1. Overview
 
-**udbhav** is a Kanban board where a logged-in team manages tasks across four stages: **Backlog → In Progress → Review → Done**. Dirty seed data is imported and cleaned by the backend, stored in Supabase, and served to a drag-and-drop board with a dashboard, in-app notifications, and real-time updates.
+**Udbhav** is a Kanban board where a logged-in team manages tasks across four stages: **Backlog → In Progress → Review → Done**. Dirty seed data is imported and cleaned by the backend, stored in Supabase, and served to a drag-and-drop board with a dashboard, in-app notifications, and real-time updates.
 
 ## 2. Users & roles
 

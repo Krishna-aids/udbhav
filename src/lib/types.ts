@@ -1,66 +1,79 @@
-export const STATUSES = ["Backlog", "In Progress", "Review", "Done"] as const;
-export type TaskStatus = (typeof STATUSES)[number];
+export type UserRole = 'admin' | 'manager' | 'member';
 
-export const PRIORITIES = ["low", "med", "high"] as const;
-export type TaskPriority = (typeof PRIORITIES)[number];
-
-export const ROLES = ["admin", "manager", "member"] as const;
-export type UserRole = (typeof ROLES)[number];
-
-export type User = {
+export interface User {
   id: string;
   name: string;
   email: string;
   role: UserRole;
-  avatar: string | null;
+  avatar?: string;
   created_at: string;
-};
+}
 
-export type AuthUser = Pick<User, "id" | "name" | "role">;
+export type TaskStatus = 'Backlog' | 'In Progress' | 'Review' | 'Done';
+export type TaskPriority = 'low' | 'med' | 'high';
 
-export type Task = {
+export interface Task {
   id: string;
   title: string;
-  description: string;
+  description?: string;
   status: TaskStatus;
   assignee: string;
   priority: TaskPriority;
   labels: string[];
-  due_date: string | null;
+  due_date?: string;
   estimate_hours: number;
-  completed_date: string | null;
+  completed_date?: string;
   position: number;
   has_warning: boolean;
-  created_by: string | null;
+  created_by?: string;
   created_at: string;
   updated_at: string;
-};
+}
 
-export type Comment = {
+export interface Comment {
   id: string;
   task_id: string;
   user_id: string;
   text: string;
   created_at: string;
-};
+  user?: {
+    name: string;
+    avatar?: string;
+    email: string;
+  };
+}
 
 export type ActivityAction =
-  | "created"
-  | "moved"
-  | "completed"
-  | "reordered"
-  | "assigned"
-  | "unassigned"
-  | "deleted"
-  | "imported"
-  | "reset";
+  | 'created'
+  | 'moved'
+  | 'completed'
+  | 'reordered'
+  | 'assigned'
+  | 'unassigned'
+  | 'deleted'
+  | 'imported'
+  | 'reset';
 
-export type Activity = {
+export interface ActivityLog {
   id: string;
-  task_id: string | null;
-  user_id: string | null;
+  task_id?: string;
+  user_id?: string;
   action: ActivityAction;
-  from_status: string | null;
-  to_status: string | null;
+  from_status?: string;
+  to_status?: string;
   created_at: string;
-};
+  user?: {
+    name: string;
+    email: string;
+  };
+  task?: {
+    title: string;
+  };
+}
+
+export interface JWTPayload {
+  userId: string;
+  role: UserRole;
+  name: string;
+  email: string;
+}

@@ -1,562 +1,407 @@
 [
   {
-    "id": "T-001",
-    "title": "Task 1: Review sprint metrics",
-    "description": "Seed task 1 used to exercise the udbhav board workflow.",
+    "id": "TASK-001",
+    "title": "Old Duplicate Task 1",
+    "description": "This should be discarded because it appears earlier.",
     "status": "Backlog",
-    "assignee": "Asha Admin",
+    "assignee": "Alice",
     "priority": "low",
-    "labels": [
-      "api"
-    ],
+    "labels": ["bug"],
     "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
+    "estimate_hours": 3
   },
   {
-    "id": "T-002",
-    "title": "Task 2: Wire activity events",
-    "description": "Seed task 2 used to exercise the udbhav board workflow.",
-    "status": "backlog",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "ui"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": "3",
-    "completed_date": null
+    "id": "TASK-001",
+    "title": "Clean Task 1",
+    "description": "This should be kept because it appears later.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "labels": ["bug"],
+    "due_date": "2026-06-10",
+    "estimate_hours": 3
   },
   {
-    "id": "T-003",
-    "title": "Task 3: Polish task details",
-    "description": "Seed task 3 used to exercise the udbhav board workflow.",
-    "status": "Review",
+    "id": "TASK-002",
+    "title": "Task with Null Assignee",
+    "description": "Assignee is null, should be repaired to Unassigned.",
+    "status": "Backlog",
     "assignee": null,
-    "priority": "high",
-    "labels": [
-      "board"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
-  },
-  {
-    "id": "T-004",
-    "title": "Task 4: Validate auth state",
-    "description": "Seed task 4 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "dashboard"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": "2026-07-08"
-  },
-  {
-    "id": "T-005",
-    "title": "Task 5: Tune import handling",
-    "description": "Seed task 5 used to exercise the udbhav board workflow.",
-    "status": "Backlog",
-    "assignee": "Mira Manager",
     "priority": "med",
-    "labels": [
-      "auth"
-    ],
+    "labels": ["frontend"],
     "due_date": "10/06/2026",
-    "estimate_hours": 6,
-    "completed_date": null
+    "estimate_hours": 5
   },
   {
-    "id": "T-006",
-    "title": "Task 6: Old duplicate copy",
-    "description": "This older duplicate should be discarded by the cleaner.",
-    "status": "Backlog",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "duplicate"
-    ],
-    "due_date": "2026-06-13",
-    "estimate_hours": 1,
-    "completed_date": null
-  },
-  {
-    "id": "T-006",
-    "title": "Task 6: Prepare board workflow",
-    "description": "Seed task 6 used to exercise the udbhav board workflow.",
+    "id": "TASK-003",
+    "title": "Task with Empty Assignee",
+    "description": "Assignee is empty string, should be repaired to Unassigned.",
     "status": "In Progress",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "import"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 1,
-    "completed_date": null
-  },
-  {
-    "id": "T-007",
-    "title": "Task 7: Review sprint metrics",
-    "description": "Seed task 7 used to exercise the udbhav board workflow.",
-    "status": "Review",
     "assignee": "",
-    "priority": "low",
-    "labels": [
-      "activity"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
+    "priority": "high",
+    "labels": ["api"],
+    "due_date": "June 5, 2026",
+    "estimate_hours": 8
   },
   {
-    "id": "T-008",
-    "title": "Task 8: Wire activity events",
-    "description": "Seed task 8 used to exercise the udbhav board workflow.",
-    "status": "Done",
+    "id": "TASK-004",
+    "title": "Task with N/A Assignee",
+    "description": "Assignee is N/A, should be repaired to Unassigned.",
+    "status": "Review",
     "assignee": "N/A",
-    "priority": "med",
-    "labels": [
-      "qa"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 3,
-    "completed_date": "2026-07-08"
-  },
-  {
-    "id": "T-009",
-    "title": "Task 9: Polish task details",
-    "description": "Seed task 9 used to exercise the udbhav board workflow.",
-    "status": "Queued",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "api"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
-  },
-  {
-    "id": "T-010",
-    "title": "Task 10: Validate auth state",
-    "description": "Seed task 10 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "n/a",
     "priority": "low",
-    "labels": [
-      "ui"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": null
+    "labels": ["docs"],
+    "due_date": "2026-06-12",
+    "estimate_hours": "2"
   },
   {
-    "id": "T-011",
-    "title": "Task 11: Tune import handling",
-    "description": "Seed task 11 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "board"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": -2,
-    "completed_date": null
-  },
-  {
-    "id": "T-012",
-    "title": "Task 12: Prepare board workflow",
-    "description": "Seed task 12 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "dashboard"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": "five",
-    "completed_date": "2026-07-08"
-  },
-  {
-    "id": "T-013",
-    "title": "Task 13: Review sprint metrics",
-    "description": "Seed task 13 used to exercise the udbhav board workflow.",
+    "id": "TASK-005",
+    "title": "Old Duplicate Task 5",
+    "description": "This should be discarded.",
     "status": "Backlog",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "auth"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
-  },
-  {
-    "id": "T-014",
-    "title": "Task 14: Outdated duplicate",
-    "description": "This older duplicate should be discarded by the cleaner.",
-    "status": "Review",
-    "assignee": "Asha Admin",
-    "priority": "med",
-    "labels": [
-      "duplicate"
-    ],
-    "due_date": "2026-06-21",
-    "estimate_hours": 2,
-    "completed_date": null
-  },
-  {
-    "id": "T-014",
-    "title": "Task 14: Wire activity events",
-    "description": "Seed task 14 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "import"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 3,
-    "completed_date": null
-  },
-  {
-    "id": "T-015",
-    "title": "Task 15: Polish task details",
-    "description": "Seed task 15 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Dev Member",
+    "assignee": "Bob",
     "priority": "high",
-    "labels": [
-      "activity"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
+    "due_date": "2026-06-15",
+    "estimate_hours": 4
   },
   {
-    "id": "T-016",
-    "title": "Task 16: Validate auth state",
-    "description": "Seed task 16 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "qa"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": "2026-07-08"
-  },
-  {
-    "id": "T-017",
-    "title": "Task 17: Tune import handling",
-    "description": "Seed task 17 used to exercise the udbhav board workflow.",
+    "id": "TASK-005",
+    "title": "Clean Task 5",
+    "description": "This should be kept.",
     "status": "Backlog",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "api"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 6,
-    "completed_date": null
-  },
-  {
-    "id": "T-018",
-    "title": "Task 18: Prepare board workflow",
-    "description": "Seed task 18 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "Dev Member",
+    "assignee": "Bob",
     "priority": "high",
-    "labels": [
-      "ui"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 1,
-    "completed_date": null
+    "due_date": "2026-06-15",
+    "estimate_hours": 4
   },
   {
-    "id": "T-019",
-    "title": "Task 19: Review sprint metrics",
-    "description": "Seed task 19 used to exercise the udbhav board workflow.",
-    "status": "Later",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "board"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
-  },
-  {
-    "id": "T-020",
-    "title": "Task 20: Wire activity events",
-    "description": "Seed task 20 used to exercise the udbhav board workflow.",
+    "id": "TASK-006",
+    "title": "Task with Negative Estimate",
+    "description": "Estimate is negative, should be repaired to 0.",
     "status": "Done",
-    "assignee": "Mira Manager",
+    "assignee": "Charlie",
     "priority": "med",
-    "labels": [
-      "dashboard"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 3,
-    "completed_date": "2026-07-08"
+    "due_date": "2026-06-01",
+    "estimate_hours": -5
   },
   {
-    "id": "T-021",
-    "title": "Task 21: Stale duplicate",
-    "description": "This older duplicate should be discarded by the cleaner.",
-    "status": "Done",
-    "assignee": "Mira Manager",
-    "priority": "low",
-    "labels": [
-      "duplicate"
-    ],
-    "due_date": "2026-06-07",
-    "estimate_hours": 1,
-    "completed_date": "2026-06-09"
-  },
-  {
-    "id": "T-021",
-    "title": "Task 21: Polish task details",
-    "description": "Seed task 21 used to exercise the udbhav board workflow.",
+    "id": "TASK-007",
+    "title": "Task with Alpha Estimate",
+    "description": "Estimate is a non-numeric string, should be repaired to 0.",
     "status": "Backlog",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "auth"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
-  },
-  {
-    "id": "T-022",
-    "title": "Task 22: Validate auth state",
-    "description": "Seed task 22 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "Asha Admin",
+    "assignee": "Alice",
     "priority": "low",
-    "labels": [
-      "import"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": null
+    "due_date": "15/06/2026",
+    "estimate_hours": "abc"
   },
   {
-    "id": "T-023",
-    "title": "Task 23: Tune import handling",
-    "description": "Seed task 23 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "activity"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 6,
-    "completed_date": null
-  },
-  {
-    "id": "T-024",
-    "title": "Task 24: Prepare board workflow",
-    "description": "Seed task 24 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Dev Member",
+    "id": "TASK-008",
+    "title": "Task with Null Estimate",
+    "description": "Estimate is null, should be repaired to 0.",
+    "status": "In Progress",
+    "assignee": "Bob",
     "priority": "high",
-    "labels": [
-      "qa"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 1,
-    "completed_date": "2026-07-08"
+    "due_date": "June 12, 2026",
+    "estimate_hours": null
   },
   {
-    "id": "T-025",
-    "title": "Task 25: Review sprint metrics",
-    "description": "Seed task 25 used to exercise the udbhav board workflow.",
+    "id": "TASK-009",
+    "title": "Task with Word Estimate",
+    "description": "Estimate is word, should be repaired to 0.",
+    "status": "Review",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "2026-06-20",
+    "estimate_hours": "ten"
+  },
+  {
+    "id": "TASK-010",
+    "title": "Old Duplicate Task 10",
+    "description": "This should be discarded.",
     "status": "Backlog",
-    "assignee": "Asha Admin",
+    "assignee": "Dave",
     "priority": "low",
-    "labels": [
-      "api"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
+    "due_date": "2026-06-25",
+    "estimate_hours": 6
   },
   {
-    "id": "T-026",
-    "title": "Task 26: Wire activity events",
-    "description": "Seed task 26 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "ui"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 3,
-    "completed_date": null
-  },
-  {
-    "id": "T-027",
-    "title": "Task 27: Polish task details",
-    "description": "Seed task 27 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "board"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
-  },
-  {
-    "id": "T-028",
-    "title": "Task 28: Validate auth state",
-    "description": "Seed task 28 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "dashboard"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": "2026-07-08"
-  },
-  {
-    "id": "T-029",
-    "title": "Task 29: Tune import handling",
-    "description": "Seed task 29 used to exercise the udbhav board workflow.",
+    "id": "TASK-010",
+    "title": "Clean Task 10",
+    "description": "This should be kept.",
     "status": "Backlog",
-    "assignee": "Mira Manager",
-    "priority": "med",
-    "labels": [
-      "auth"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 6,
-    "completed_date": null
-  },
-  {
-    "id": "T-030",
-    "title": "Task 30: Prepare board workflow",
-    "description": "Seed task 30 used to exercise the udbhav board workflow.",
-    "status": "In Progress",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "import"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 1,
-    "completed_date": null
-  },
-  {
-    "id": "T-031",
-    "title": "Task 31: Review sprint metrics",
-    "description": "Seed task 31 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Asha Admin",
+    "assignee": "Dave",
     "priority": "low",
-    "labels": [
-      "activity"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
+    "due_date": "2026-06-25",
+    "estimate_hours": 6
   },
   {
-    "id": "T-032",
-    "title": "Task 32: Wire activity events",
-    "description": "Seed task 32 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Mira Manager",
+    "id": "TASK-011",
+    "title": "Task with Invalid Status 1",
+    "description": "Status is invalid, should be repaired to Backlog with warning flag.",
+    "status": "InvalidStatus",
+    "assignee": "Alice",
     "priority": "med",
-    "labels": [
-      "qa"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": 3,
-    "completed_date": "2026-07-08"
+    "due_date": "2026-06-18",
+    "estimate_hours": 4
   },
   {
-    "id": "T-033",
-    "title": "Task 33: Polish task details",
-    "description": "Seed task 33 used to exercise the udbhav board workflow.",
+    "id": "TASK-012",
+    "title": "Task with Invalid Status 2",
+    "description": "Status is Unknown, should be repaired to Backlog with warning flag.",
+    "status": "Unknown",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "20/06/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-013",
+    "title": "Task with Invalid Status 3",
+    "description": "Status is Random, should be repaired to Backlog with warning flag.",
+    "status": "Random",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "June 18, 2026",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-014",
+    "title": "Task with Case-Insensitive Status 1",
+    "description": "Status is in lower case. Should be normalized silently to In Progress.",
+    "status": "in progress",
+    "assignee": "Dave",
+    "priority": "med",
+    "due_date": "2026-06-22",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-015",
+    "title": "Task with Case-Insensitive Status 2",
+    "description": "Status is in upper case. Should be normalized silently to Review.",
+    "status": "REVIEW",
+    "assignee": "Alice",
+    "priority": "high",
+    "due_date": "22/06/2026",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-016",
+    "title": "Standard Task 16",
+    "description": "Normal backlog task.",
     "status": "Backlog",
-    "assignee": "Dev Member",
-    "priority": "high",
-    "labels": [
-      "api"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 4,
-    "completed_date": null
+    "assignee": "Bob",
+    "priority": "low",
+    "due_date": "2026-06-30",
+    "estimate_hours": 4
   },
   {
-    "id": "T-034",
-    "title": "Task 34: Validate auth state",
-    "description": "Seed task 34 used to exercise the udbhav board workflow.",
+    "id": "TASK-017",
+    "title": "Standard Task 17",
+    "description": "Normal task in progress.",
     "status": "In Progress",
-    "assignee": "Asha Admin",
-    "priority": "low",
-    "labels": [
-      "ui"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 5,
-    "completed_date": null
-  },
-  {
-    "id": "T-035",
-    "title": "Task 35: Tune import handling",
-    "description": "Seed task 35 used to exercise the udbhav board workflow.",
-    "status": "Review",
-    "assignee": "Mira Manager",
+    "assignee": "Charlie",
     "priority": "med",
-    "labels": [
-      "board"
-    ],
-    "due_date": "10/06/2026",
-    "estimate_hours": "unknown",
-    "completed_date": null
+    "due_date": "June 25, 2026",
+    "estimate_hours": 6
   },
   {
-    "id": "T-036",
-    "title": "Task 36: Prepare board workflow",
-    "description": "Seed task 36 used to exercise the udbhav board workflow.",
-    "status": "Done",
-    "assignee": "Dev Member",
+    "id": "TASK-018",
+    "title": "Standard Task 18",
+    "description": "Normal task in review.",
+    "status": "Review",
+    "assignee": "Dave",
     "priority": "high",
-    "labels": [
-      "dashboard"
-    ],
-    "due_date": "June 5, 2026",
-    "estimate_hours": 1,
-    "completed_date": "2026-07-08"
+    "due_date": "2026-07-02",
+    "estimate_hours": 3
   },
   {
-    "id": "T-037",
-    "title": "Task 37: Review sprint metrics",
-    "description": "Seed task 37 used to exercise the udbhav board workflow.",
-    "status": "Icebox",
-    "assignee": "Asha Admin",
+    "id": "TASK-019",
+    "title": "Standard Task 19",
+    "description": "Normal completed task.",
+    "status": "Done",
+    "assignee": "Alice",
     "priority": "low",
-    "labels": [
-      "auth"
-    ],
-    "due_date": "2026-06-10",
-    "estimate_hours": 2,
-    "completed_date": null
+    "due_date": "10/06/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-020",
+    "title": "Standard Task 20",
+    "description": "Another backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "med",
+    "due_date": "2026-07-05",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-021",
+    "title": "Standard Task 21",
+    "description": "Another in progress task.",
+    "status": "In Progress",
+    "assignee": "Charlie",
+    "priority": "high",
+    "due_date": "05/07/2026",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-022",
+    "title": "Standard Task 22",
+    "description": "Another review task.",
+    "status": "Review",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "June 30, 2026",
+    "estimate_hours": 1
+  },
+  {
+    "id": "TASK-023",
+    "title": "Standard Task 23",
+    "description": "Another completed task.",
+    "status": "Done",
+    "assignee": "Alice",
+    "priority": "med",
+    "due_date": "2026-07-01",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-024",
+    "title": "Standard Task 24",
+    "description": "Third backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "2026-07-10",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-025",
+    "title": "Standard Task 25",
+    "description": "Third in progress task.",
+    "status": "In Progress",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "10/07/2026",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-026",
+    "title": "Standard Task 26",
+    "description": "Third completed task.",
+    "status": "Done",
+    "assignee": "Dave",
+    "priority": "med",
+    "due_date": "2026-07-03",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-027",
+    "title": "Standard Task 27",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "high",
+    "due_date": "July 5, 2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-028",
+    "title": "Standard Task 28",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "low",
+    "due_date": "2026-07-15",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-029",
+    "title": "Standard Task 29",
+    "description": "Completed task.",
+    "status": "Done",
+    "assignee": "Charlie",
+    "priority": "med",
+    "due_date": "15/07/2026",
+    "estimate_hours": 7
+  },
+  {
+    "id": "TASK-030",
+    "title": "Standard Task 30",
+    "description": "Completed task.",
+    "status": "Done",
+    "assignee": "Dave",
+    "priority": "high",
+    "due_date": "July 10, 2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-031",
+    "title": "Standard Task 31",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "low",
+    "due_date": "2026-07-20",
+    "estimate_hours": 3
+  },
+  {
+    "id": "TASK-032",
+    "title": "Standard Task 32",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "med",
+    "due_date": "22/07/2026",
+    "estimate_hours": 6
+  },
+  {
+    "id": "TASK-033",
+    "title": "Standard Task 33",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Charlie",
+    "priority": "high",
+    "due_date": "July 20, 2026",
+    "estimate_hours": 4
+  },
+  {
+    "id": "TASK-034",
+    "title": "Standard Task 34",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Dave",
+    "priority": "low",
+    "due_date": "2026-07-25",
+    "estimate_hours": 2
+  },
+  {
+    "id": "TASK-035",
+    "title": "Standard Task 35",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Alice",
+    "priority": "med",
+    "due_date": "25/07/2026",
+    "estimate_hours": 5
+  },
+  {
+    "id": "TASK-036",
+    "title": "Standard Task 36",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Bob",
+    "priority": "high",
+    "due_date": "July 25, 2026",
+    "estimate_hours": 8
+  },
+  {
+    "id": "TASK-037",
+    "title": "Standard Task 37",
+    "description": "Backlog task.",
+    "status": "Backlog",
+    "assignee": "Charlie",
+    "priority": "low",
+    "due_date": "2026-07-30",
+    "estimate_hours": 1
   }
 ]

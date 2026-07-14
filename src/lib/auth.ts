@@ -1,22 +1,21 @@
-import { cookies } from "next/headers";
-import { verifyToken } from "@/lib/jwt";
-import type { AuthUser, UserRole } from "@/lib/types";
+import { cookies } from 'next/headers';
+import { verifyToken } from './jwt';
+import { JWTPayload } from './types';
 
-export async function currentUser(): Promise<AuthUser | null> {
-  const cookieStore = await cookies();
-  const token = cookieStore.get("token")?.value;
-
-  if (!token) {
+/**
+ * Retrieves the current logged-in user from the HTTP-only cookie.
+ * Returns the decoded JWTPayload or null if not authenticated.
+ */
+export async function currentUser(): Promise<JWTPayload | null> {
+  try {
+    const cookieStore = await cookies();
+    const token = cookieStore.get('token')?.value;
+    if (!token) {
+      return null;
+    }
+    return await verifyToken(token);
+  } catch (error) {
+    console.error('Error fetching current user:', error);
     return null;
   }
-
-  return verifyToken(token);
-}
-
-export function canManageTasks(role: UserRole) {
-  return role === "admin" || role === "manager";
-}
-
-export function canTouchDone(role: UserRole) {
-  return role === "admin" || role === "manager";
 }
