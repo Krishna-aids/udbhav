@@ -1,4 +1,4 @@
-# 🚀 ADAM Project
+# 🚀 Udbhav Project
 
 <div align="center">
 
@@ -83,7 +83,7 @@ ADAM_Project/
 ## 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/ADAM_Project.git
+git clone https://github.com/yourusername/udbhav.git
 ```
 
 ---
@@ -91,7 +91,7 @@ git clone https://github.com/yourusername/ADAM_Project.git
 ## 2️⃣ Navigate to the Project
 
 ```bash
-cd ADAM_Project
+cd udbhav
 ```
 
 ---
@@ -132,7 +132,7 @@ http://localhost:3000
 
 # 🌍 Live Demo
 
-### 🔗 https://adam-proj.vercel.app/board
+### 🔗  https://udbhav-ackawcft0-hk1406.vercel.app/login
 
 ---
 
