@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=Welcome+to+ADAM+Project!;Built+with+Next.js+%2B+TypeScript;Fast+%7C+Modern+%7C+Responsive" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=700&size=30&pause=1000&color=3B82F6&center=true&vCenter=true&width=700&lines=Welcome+to+Udbhav!;Built+with+Next.js+%2B+TypeScript;Fast+%7C+Modern+%7C+Responsive" alt="Typing SVG" />
 
 <p>
   <img src="https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js">
@@ -14,7 +14,7 @@
 
 **A modern Kanban Board built with Next.js**
 
-🌐 **Live Demo:** https://adam-proj.vercel.app/board
+🌐 **Live Demo:**  https://udbhav-ackawcft0-hk1406.vercel.app/login
 
 </div>
 
@@ -133,7 +133,9 @@ http://localhost:3000
 # 🌍 Live Demo
 
 ### 🔗  https://udbhav-ackawcft0-hk1406.vercel.app/login
-
+Admin: admin@udbhav.com (password: admin123)
+Manager: manager@udbhav.com (password: manager123)
+Member: member@udbhav.com (password: member123)
 ---
 
 # 📖 Learn More
